@@ -19,71 +19,279 @@
 </head>
 
 <body>
+  <main>
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+      <div class="header-container">
 
-  <!-- ================= HEADER ================= -->
-  <header class="site-header">
-    <div class="header-container">
-
-      <!-- ========== Logo ========== -->
-      <a href="/" class="logo" aria-label="GTG Home">
-        <img src="assets/images/logo.svg" alt="GTG – Premium Fragrances Logo" />
-      </a>
+        <!-- ========== Logo ========== -->
+        <a href="/" class="logo" aria-label="GTG Home">
+          <img src="assets/images/logo.svg" alt="GTG – Premium Fragrances Logo" />
+        </a>
 
 
 
-      <!-- ========== Navigation ============ -->
-      <nav class="main-nav">
-        <ul>
-          <li><a href="/">Home</a></li>
+        <!-- ========== Navigation ============ -->
+        <nav class="main-nav">
+          <ul>
+            <li><a href="/">Home</a></li>
 
-          <li class="dropdown">
-            <button class="dropdown-toggle">
-              Shop <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <ul class="dropdown-menu">
-              <li><a href="#">Men</a></li>
-              <li><a href="#">Women</a></li>
-              <li><a href="#">Unisex</a></li>
-              <li><a href="#">New Arrivals</a></li>
-            </ul>
-          </li>
+            <li class="dropdown">
+              <button class="dropdown-toggle">
+                <span>Shop</span>
+                <img class="down-arrow" src="assets/images/down_arrow.svg" alt="down arrow" />
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Unisex</a></li>
+                <li><a href="#">New Arrivals</a></li>
+              </ul>
+            </li>
 
-          <li><a href="#">Fragrances</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
+            <li><a href="#">Fragrances</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
 
-      <!-- ==========  Actions =========== -->
-      <div class="header-actions">
-        <button class="search-btn" id="openSearch">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-        <a href="/shop" class="btn-primary">Shop Now</a>
+        <!-- ==========  Actions =========== -->
+        <div class="header-actions">
+          <button class="search-btn" id="openSearch">
+            <img src="assets/images/search.svg" alt="search icon" />
+          </button>
+          <a href="/shop" class="btn-primary">Shop Now</a>
+        </div>
+
       </div>
 
-    </div>
+      <!-- ========== Search Bar =========== -->
+      <div class="search-bar" id="searchBar">
+        <input type="text" placeholder="Search fragrances..." />
+        <button id="closeSearch">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </header>
 
-    <!-- ========== Search Bar =========== -->
-    <div class="search-bar" id="searchBar">
-      <input type="text" placeholder="Search fragrances..." />
-      <button id="closeSearch">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-    </div>
-  </header>
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="hero-content">
+        <p class="hero-awardTag">
+          <img class="award-tag" src="assets/images/award.svg" alt="Award icon" />
+          <span> Awarded the best perfume in the world</span>
+        </p>
+        <h1 class="hero-heading">Live your best life.</h1>
+        <div class="hero-stack">
+          <div class="stack-item">
+            <span class="stack-number" data-target="10">0</span><span class="stack-suffix">x</span>
+            <p class="stack-label">power</p>
+          </div>
 
-  <!-- ================= HERO ================= -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
+          <div class="stack-item">
+            <span class="stack-number" data-target="9">0</span>
+            <p class="stack-label">ingredients</p>
+          </div>
 
-    <div class="hero-content">
-      <h1>Luxury Fragrances<br>Inspired by Nature</h1>
-      <p>Freshness that lasts. Elegance that speaks.</p>
-      <a href="/shop" class="btn-hero">Explore Collection</a>
-    </div>
-  </section>
+          <div class="stack-item">
+            <span class="stack-number" data-target="20">0</span><span class="stack-suffix">K+</span>
+            <p class="stack-label">happy customers</p>
+          </div>
+        </div>
+        <a href="/shop" class="btn-primary">Shop Now</a>
+      </div>
+    </section>
+
+    <!-- ============= our collection ============== -->
+    <section class="container collection">
+      <div class="collection-left">
+        <h2 class="headings">Our Collection</h2>
+
+        <div class="accordion">
+          <div class="accordion-item active" data-image="assets/images/collection-1.png">
+            <button class="accordion-header">
+              Signature Scents
+              <span class="icon">−</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Discover our curated line of signature perfumes, designed to become
+                your daily companion.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-image="assets/images/collection-2.png">
+            <button class="accordion-header">
+              Signature Scents
+              <span class="icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Crafted with rare ingredients for long-lasting impressions and
+                elegant presence.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-image="assets/images/collection-3.png">
+            <button class="accordion-header">
+              Signature Scents
+              <span class="icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Modern blends inspired by timeless luxury and refined lifestyles.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-image="assets/images/collection-4.png">
+            <button class="accordion-header">
+              Signature Scents
+              <span class="icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Designed for those who value subtle sophistication and depth.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="collection-right">
+        <img id="collectionImage" src="assets/images/img1.jpg" alt="Collection image" />
+      </div>
+    </section>
+
+    <!-- ===============  counter ================ -->
+    <section class="stats-section" id="stats">
+      <div class="stats-container">
+        <div class="stat-item">
+          <span class="stat-number" data-target="84">0</span><span class="stat-suffix">%</span>
+          <p>Lorem ipsum dolor sit amet,<br />consectetur adipiscing elit</p>
+        </div>
+
+        <div class="stat-item">
+          <span class="stat-number" data-target="78">0</span><span class="stat-suffix">%</span>
+          <p>Lorem ipsum dolor sit amet,<br />consectetur adipiscing elit</p>
+        </div>
+
+        <div class="stat-item">
+          <span class="stat-number" data-target="89">0</span><span class="stat-suffix">%</span>
+          <p>Lorem ipsum dolor sit amet,<br />consectetur adipiscing elit</p>
+        </div>
+
+        <div class="stat-item">
+          <span class="stat-number" data-target="90">0</span><span class="stat-suffix">%</span>
+          <p>Lorem ipsum dolor sit amet,<br />consectetur adipiscing elit</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== Table ================ -->
+    <section class="comparison">
+      <p class="comparison-tag">---</p>
+      <h2 class="comparison-title">Why GTG is the #1 Choice</h2>
+
+      <div class="comparison-table">
+        <!--  talble Header -->
+        <div class="row header">
+          <div class="cell label">Qualities</div>
+
+          <div class="cell brand active">
+            <img src="assets/images/gtg.png" alt="GTG" />
+            <span>GTG</span>
+          </div>
+
+          <div class="cell brand">
+            <img src="assets/images/arose.png" alt="Arose" />
+            <span>Arose</span>
+          </div>
+
+          <div class="cell brand">
+            <img src="assets/images/bela.png" alt="Bela" />
+            <span>Bela</span>
+          </div>
+
+          <div class="cell brand">
+            <img src="assets/images/daisies.png" alt="Daisies" />
+            <span>Daisies</span>
+          </div>
+        </div>
+
+        <!-- Rows -->
+        <div class="row">
+          <div class="cell label">Potency Concentration</div>
+          <div class="cell active">10x</div>
+          <div class="cell">1x</div>
+          <div class="cell">1x</div>
+          <div class="cell">10x</div>
+        </div>
+
+        <div class="row">
+          <div class="cell label">Longevity</div>
+          <div class="cell active check"></div>
+          <div class="cell cross"></div>
+          <div class="cell cross"></div>
+          <div class="cell check-outline"></div>
+        </div>
+
+        <div class="row">
+          <div class="cell label">Sillage</div>
+          <div class="cell active check"></div>
+          <div class="cell cross"></div>
+          <div class="cell cross"></div>
+          <div class="cell cross"></div>
+        </div>
+
+        <div class="row">
+          <div class="cell label">Bottle Design Score</div>
+          <div class="cell active">9</div>
+          <div class="cell">5</div>
+          <div class="cell">6</div>
+          <div class="cell">2</div>
+        </div>
+
+        <div class="row">
+          <div class="cell label">Blend and Harmony</div>
+          <div class="cell active check"></div>
+          <div class="cell cross"></div>
+          <div class="cell cross"></div>
+          <div class="cell cross"></div>
+        </div>
+
+        <div class="row">
+          <div class="cell label">Skin Compatibility</div>
+          <div class="cell active check"></div>
+          <div class="cell cross"></div>
+          <div class="cell cross"></div>
+          <div class="cell cross"></div>
+        </div>
+
+        <div class="row">
+          <div class="cell label">Scent Profile</div>
+          <div class="cell active check"></div>
+          <div class="cell check-outline"></div>
+          <div class="cell cross"></div>
+          <div class="cell cross"></div>
+        </div>
+
+        <div class="row">
+          <div class="cell label">Price vs. Quality</div>
+          <div class="cell active check"></div>
+          <div class="cell check-outline"></div>
+          <div class="cell cross"></div>
+          <div class="cell check-outline"></div>
+        </div>
+      </div>
+
+      <a href="#" class="btn-primary">Try It Risk-Free</a>
+    </section>
+
+  </main>
 
   <script src="js/script.js"></script>
 </body>
