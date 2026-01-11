@@ -102,7 +102,154 @@
         <a href="/shop" class="btn-primary">Shop Now</a>
       </div>
     </section>
+    <!--  ======= this code is not pushed yet ==================== -->
+    <section class="product container" itemscope itemtype="https://schema.org/Product">
 
+      <!-- ================= LEFT : GALLERY ================= -->
+      <div class="gallery">
+
+        <div class="main-image">
+          <img id="currentImage" src="assets/images/gallery-1.png" alt="GTG Perfumes luxury fragrance bottle"
+            loading="lazy" itemprop="image">
+
+          <button class="nav prev" aria-label="Previous image">
+            <img src="assets/images/prev.svg" alt="previous">
+          </button>
+
+          <div class="dots" id="dots" aria-hidden="true"></div>
+
+          <button class="nav next" aria-label="Next image">
+            <img src="assets/images/next.svg" alt="next">
+          </button>
+        </div>
+
+        <!-- Thumbnails (8 images ready) -->
+        <div class="thumbnails" id="thumbnails">
+          <img src="assets/images/gallery-1.png" data-index="0" alt="Perfume view 1" loading="lazy" class="active">
+          <img src="assets/images/gtg.png" data-index="1" alt="Perfume view 2" loading="lazy">
+          <img src="assets/images/rose.png" data-index="2" alt="Perfume view 3" loading="lazy">
+          <img src="assets/images/lily.png" data-index="3" alt="Perfume view 4" loading="lazy">
+          <img src="assets/images/gallery-1.png" data-index="4" alt="Perfume view 5" loading="lazy">
+          <img src="assets/images/gtg.png" data-index="5" alt="Perfume view 6" loading="lazy">
+          <img src="assets/images/rose.png" data-index="6" alt="Perfume view 7" loading="lazy">
+          <img src="assets/images/lily.png" data-index="7" alt="Perfume view 8" loading="lazy">
+        </div>
+
+      </div>
+
+      <!-- ================= RIGHT : PRODUCT INFO ================= -->
+      <div class="info">
+
+        <h1 class="perfume-title" itemprop="name">GTG Perfumes</h1>
+
+        <p class="rating" aria-label="Rated 4.7 out of 5 stars">
+          ★★★★★ <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+            <span itemprop="ratingValue">4.7</span>
+            (<span itemprop="reviewCount">190</span>+ reviews)
+          </span>
+        </p>
+
+        <p itemprop="description">
+          Experience the timeless allure backed by modern artistry, captured in every bottle of our fragrance.
+        </p>
+
+        <!-- ================= PURCHASE TYPE ================= -->
+        <div class="purchase-wrapper">
+
+          <!-- SINGLE SUBSCRIPTION -->
+          <label class="subscription-card active">
+            <input type="radio" name="purchase" value="single" checked>
+
+            <div class="card-header green">Most Popular</div>
+
+            <div class="subscription-header">
+              <span class="radio-dot"></span>
+              <span class="label-text">Single Subscription</span>
+              <span class="price">$99.99 <del>$146</del></span>
+            </div>
+
+            <div class="card-body">
+
+              <p class="section-title">Choose a Fragrance</p>
+
+              <div class="fragrance-options">
+
+                <label class="fragrance-card">
+                  <input type="radio" name="fragrance" value="original" checked>
+                  <span class="radio-circle"></span>
+                  <div class="badge">BEST-SELLER</div>
+
+                  <img src="assets/images/original.png" alt="Original fragrance">
+                  <span class="label">Original</span>
+                </label>
+
+                <label class="fragrance-card">
+                  <input type="radio" name="fragrance" value="lily">
+                  <span class="radio-circle"></span>
+
+                  <img src="assets/images/lily.png" alt="Lily fragrance">
+                  <span class="label">Lily</span>
+                </label>
+
+                <label class="fragrance-card">
+                  <input type="radio" name="fragrance" value="rose">
+                  <span class="radio-circle"></span>
+
+                  <img src="assets/images/rose.png" alt="Rose fragrance">
+                  <span class="label">Rose</span>
+                </label>
+
+              </div>
+
+              <ul class="features">
+                <li>1 Bottle Shipped Monthly</li>
+                <li><strong>Free</strong> Sampler for all fragrances</li>
+                <li><strong>50% OFF</strong> Shipping</li>
+                <li>Pause or Cancel Anytime After 3 Months</li>
+                <li>28 Day Money Back Guarantee</li>
+              </ul>
+
+            </div>
+          </label>
+
+          <!-- DOUBLE SUBSCRIPTION -->
+          <label class="subscription-card">
+            <input type="radio" name="purchase" value="double">
+
+            <div class="card-header green">Most Popular</div>
+
+            <div class="subscription-header">
+              <span class="radio-dot"></span>
+              <span class="label-text">Double Subscription</span>
+              <span class="price">$169.99 <del>$146</del></span>
+            </div>
+
+            <div class="card-body bordered">
+
+              <p class="section-title">Choose Fragrance 1</p>
+              <p class="section-title">Choose Fragrance 2</p>
+
+              <ul class="features">
+                <li>2 Bottles Shipped Monthly</li>
+                <li><strong>Free</strong> Sampler Included</li>
+                <li><strong>50% OFF</strong> Shipping</li>
+              </ul>
+
+            </div>
+          </label>
+
+        </div>
+
+        <!-- ================= ADD TO CART ================= -->
+        <a id="addToCart" class="add-to-cart" href="#" role="button" aria-label="Add GTG Perfumes to cart">
+          Add to Cart
+        </a>
+
+      </div>
+
+    </section>
+
+    <!--  ======= this code is not pushed yet ==================== -->
     <!-- ============= our collection ============== -->
     <section class="container collection">
       <div class="collection-left">

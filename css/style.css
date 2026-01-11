@@ -652,3 +652,299 @@ body {
     flex-direction: column;
   }
 }
+
+
+/* ===== this code is not pushed yet ======= */
+
+.product {
+  display: flex;
+  gap: 120px;
+  margin: auto;
+}
+
+/* ---------- GALLERY ---------- */
+.gallery {
+  width: 45%;
+}
+
+.main-image {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  min-height: 420px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.nav {
+  position: absolute;
+  bottom: -10px;
+  transform: translateY(-50%);
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.dots {
+  text-align: center;
+  position: absolute;
+  bottom: 24px;
+  right: 0;
+  left: 0;
+}
+
+.dots span {
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 4px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dots span.active {
+  background: #2a7c4f;
+}
+
+.thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.thumbnails img {
+  width: 100px;
+  object-fit: cover;
+  border-radius: 15px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.thumbnails img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+      #ffffff 0%,
+      #000000 100%);
+  opacity: 0.15;
+  border-radius: 14.16px;
+  pointer-events: none;
+}
+
+/* .thumbnails img:hover::after {
+  opacity: 1;
+} */
+
+.thumbnails img.active {
+  border-color: #7a4cff;
+}
+
+/* ---------- RIGHT ---------- */
+.info {
+  width: 55%;
+}
+
+.rating {
+  color: #2a7c4f;
+}
+
+.purchase-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.subscription-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.subscription-header .label-text {
+  flex: 1;
+  font-weight: 500;
+}
+
+.subscription-card.active .subscription-header {
+  border-bottom: 1px solid #cfcfcf;
+}
+
+.subscription-header .price {
+  color: #0b5a2a;
+  font-weight: 600;
+}
+
+.radio-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #bbb;
+  position: relative;
+}
+
+.subscription-card.active .radio-dot {
+  border-color: #0b5a2a;
+}
+
+.subscription-card.active .radio-dot::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: #0b5a2a;
+  border-radius: 50%;
+}
+
+.subscription-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.subscription-card .card-header,
+.subscription-card input,
+.subscription-card .card-body,
+.fragrance-card input {
+  display: none;
+}
+
+.subscription-card.active .card-header,
+.subscription-card.active .card-body {
+  display: block;
+}
+
+.subscription-card.active {
+  border: 2px solid #0b5a2a;
+}
+
+.card-header.green {
+  background: linear-gradient(270deg, #032E15 0%, #008236 51.92%, #00C950 100%);
+  color: #fff;
+  text-align: center;
+  padding: 6px;
+  font-weight: 600;
+  border-radius: 9px 9px 0 0;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.section-title {
+  margin: 14px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* ---------- FRAGRANCE ---------- */
+.fragrance-options {
+  display: flex;
+  gap: 14px;
+}
+
+.fragrance-card {
+  position: relative;
+  height: 145px;
+  width: 127px;
+  background: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fragrance-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fragrance-card span {
+  font-size: 13px;
+  color: #333;
+}
+
+.fragrance-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+
+/* parent highlight when selected */
+.fragrance-card:has(input:checked) {
+  transform: translateY(-3px);
+  border-color: #0b5a2a;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.18);
+}
+
+.radio-circle {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #bdbdbd;
+}
+
+.fragrance-card:has(input:checked) .radio-circle {
+  border-color: #0b5a2a;
+}
+
+.fragrance-card:has(input:checked) .radio-circle::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: #0b5a2a;
+  border-radius: 50%;
+}
+
+.badge {
+  position: absolute;
+  top: 8px;
+  left: 34px;
+  font-size: 10px;
+  padding: 2px 6px;
+  background: linear-gradient(180deg, #032E15 0%, #016630 100%);
+
+  color: #fff;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.features {
+  margin-top: 12px;
+  padding-left: 16px;
+  font-size: 13px;
+}
+
+.add-to-cart {
+  margin-top: 20px;
+  display: block;
+  background: #0b5a2a;
+  color: #fff;
+  padding: 14px;
+  border-radius: 30px;
+  text-align: center;
+  text-decoration: none;
+}
