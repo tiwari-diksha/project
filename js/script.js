@@ -1,4 +1,14 @@
+//Add scroll nav Class
+const header = document.querySelector('.site-header');
 
+window.addEventListener('scroll', () => {
+  if (window.scrollY >= 50) {
+    header.classList.add('sticky-header');
+  } else {
+    header.classList.remove('sticky-header');
+  }
+});
+// serch open/close 
 const openSearch = document.getElementById("openSearch");
 const closeSearch = document.getElementById("closeSearch");
 const searchBar = document.getElementById("searchBar");
@@ -9,6 +19,24 @@ openSearch.addEventListener("click", () => {
 
 closeSearch.addEventListener("click", () => {
   searchBar.classList.remove("active");
+});
+
+// header menu responsive humberger menu 
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.querySelector(".main-nav");
+const toggleBtn = document.querySelector('.dropdown-toggle');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+
+menuToggle.addEventListener("click", () => {
+  menuToggle.classList.toggle("active");
+  mainNav.classList.toggle("active");
+
+  const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+  menuToggle.setAttribute("aria-expanded", !expanded);
+});
+
+toggleBtn.addEventListener('click', function () {
+  dropdownMenu.classList.toggle('active');
 });
 
 
@@ -109,18 +137,17 @@ const observer = new IntersectionObserver(
 
 observer.observe(document.getElementById("stats"));
 
-//====== this code is not pushed yet ======
 
 /* ---------- GALLERY ---------- */
 const images = [
   "assets/images/gallery-1.png",
-  "assets/images/rose.png",
-  "assets/images/lily.png",
-  "assets/images/gtg.png",
+  "assets/images/gallery-2.png",
+  "assets/images/gallery-3.png",
+ "assets/images/gallery-1.png",
+  "assets/images/gallery-2.png",
+  "assets/images/gallery-3.png",
   "assets/images/gallery-1.png",
-  "assets/images/rose.png",
-  "assets/images/lily.png",
-  "assets/images/gtg.png"
+  "assets/images/gallery-2.png",
 ];
 
 let index = 0;
